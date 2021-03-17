@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+    <body>
+         <header th:insert="header/header.html :: header"/>
+         <H1>Imagine career</H1>
+         <button type="button" class="btn btn-primary" href="/career/add">Create new career</button>
+         <button type="button" class="btn btn-primary" href="'/career/' + ${el.id} + '/edit'">Edit</button>
+         <button type="button" class="btn btn-primary" href="'/gallery/ + ${el.id} + '/remove''">Remove</button>
+    </body>
+</html>

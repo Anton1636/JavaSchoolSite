@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="header/header.html :: header"/>
+<div class="container mt-5 mb-5">
+    <H1>Edit schedule</H1>
+    <div th:each="el : ${schedule}">
+        <form method="post">
+            <input type="text" th:value="${el.teacherName}" name="teacherName" placeholder="Enter teacher name" class="form-control">
+            <input type="text" th:value="${el.subjectName}" name="subjectName" placeholder="Enter subject name" class="form-control">
+            <input type="text" th:value="${el.startTime}" name="startTime" placeholder="Enter start time" class="form-control">
+            <input type="text" th:value="${el.endTime}" name="endTime" placeholder="Enter end time" class="form-control">
+            <input type="text" th:value="${el.dayWeek}" name="dayWeek" placeholder="Enter day week" class="form-control">
+            <button type="submit" class="btn btn-primary">Edit</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

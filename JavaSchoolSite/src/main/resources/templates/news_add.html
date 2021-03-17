@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<header th:insert="header/header.html :: header"/>
+<div class="container mt-5 mb-5">
+<H1>Add new news</H1>
+    <form action="/news/add" method="post">
+         <input type="text" name="description" placeholder="Enter description" class="form-control">
+         <input type="text" name="title" placeholder="Enter title" class="form-control">
+         <input type="text" name="imageLink" placeholder="Enter image link" class="form-control">
+         <input type="text" name="datePost" placeholder="Enter date post" class="form-control">
+    </form>
+    <button type="submit" class="btn btn-primary">Add</button>
+</div>
+</body>
+</html>
